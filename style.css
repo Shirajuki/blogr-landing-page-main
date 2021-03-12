@@ -16,21 +16,173 @@
 	--bodyGradient1: hsl(237, 17%, 21%); /* Very dark gray blue */
 	--bodyGradient2: hsl(237, 23%, 32%); /* Very dark desaturated blue */
 }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 body {
 	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
 }
-
+/* HEADER
+ ****************************************************************/
+header {
+	position: absolute;
+	width: 100%;
+	margin-top: 50px;
+	z-index: 2;
+}
+header nav {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+}
+header nav > div {
+	display: flex;
+	align-items: center;
+}
+header nav > div.auth > a.btn.inverse {
+	margin-right: 5px;
+	border: 1px solid transparent
+}
+header nav a {
+	font-weight: 500;
+}
+header nav > div > a.logo {
+	margin-right: 50px;
+}
+header nav .dropdown {
+	display: flex;
+	height: 100%;
+	margin: 0 10px;
+	align-items: center;
+}
+header nav .dropdown div {
+	display: none;
+}
+a, a:visited {
+	color: var(--text);
+	text-decoration: none;
+}
+/* SPLASH
+ ****************************************************************/
+div.splash {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+	height: 80vh;
+	color: var(--text);
+	text-align: center;
+}
+div.splash::after {
+	content: "";
+	position: absolute;
+	background-image: url("images/bg-pattern-intro.svg");
+	background-repeat: no-repeat;
+	background-size: 200%;
+	background-position: 20% 50%;
+	width: 100%;
+	height: 100%;
+	opacity: .8; /* Make it less bright */
+}
+h1, h2, h3 {
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	padding: 10px;
+}
+div.splash > h1 {
+	font-size: 3em;
+	z-index: 2;
+}
+div.splash > h4 {
+	font-size: 1em;
+	font-weight: 400;
+	z-index: 2;
+}
+div.splash > div {
+	transform: translateY(40px);
+	z-index: 2;
+}
+div.splash > div > a.btn.inverse {
+	margin-left: 15px;
+}
+/* BUTTONS
+ ****************************************************************/
+a.btn {
+	display: inline-block;
+	background-color: var(--text);
+	color: var(--ctaText);
+	padding: 10px 12px;
+	border-radius: 100px;
+	font-weight: 700;
+	font-size: .9em;
+	border: 1px solid var(--text);
+	transition-duration: .3s;
+	text-align: center;
+	min-width: 120px;
+}
+a.btn:hover {
+	color: var(--text);
+	background-color: var(--ctaHoverBackground);
+	border: 1px solid var(--ctaHoverBackground);
+}
+a.btn.inverse {
+	background-color: transparent;
+	color: var(--text);
+}
+a.btn.inverse:hover {
+	color: var(--ctaHoverBackground);
+	background-color: var(--text);
+}
+/* SECTIONS
+ ****************************************************************/
+div.sectionWrapper {
+	display: flex;
+	flex-direction: column;
+	margin-top: 100px;
+}
+div.sectionWrapper > h2 {
+	text-align: center;
+}
+div.section {
+	margin: 50px auto;
+	display: flex;
+	width: 80%;
+}
+div.section > div {
+	width: 50%;
+}
+div.section p {
+	padding: 10px;
+}
+/* FOOTER
+ ****************************************************************/
+footer {
+	background-color: var(--footerBackground);
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 /* 
+- Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
+- Weights: 300, 600
 font-family: 'Overpass', sans-serif; 
+
+- Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
+- Weights: 400, 500, 700
 font-family: 'Ubuntu', sans-serif;
-*/
+ */
+
 
 /* Desktop */
 @media only screen and (max-width: 1440px) {
+
 }
 /* Mobile: 375px */
 @media only screen and (max-width: 375px) {
+
 }
