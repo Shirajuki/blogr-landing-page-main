@@ -1,2 +1,36 @@
+:root {
+	/* ### Primary */
+	--ctaText: hsl(356, 100%, 66%); /* Light red*/
+	--ctaHoverBackground: hsl(355, 100%, 74%); /* Very light red */
+	--headings: hsl(208, 49%, 24%); /* Very dark blue */
+	/* ### Neutral */
+	--text: hsl(0, 0%, 100%); /* white */
+	--footerText: hsl(240, 2%, 79%); /* Grayish blue */
+	--bodyCopy: hsl(207, 13%, 34%); /* Very dark grayish blue */
+	--footerBackground: hsl(240, 10%, 16%); /* Very dark black blue*/
+	/* ### Gradient */
+	/* Background gradient - Intro/CTA mobile nav: */
+	--gradient1: hsl(13, 100%, 72%); /* Very light red */
+	--gradient2: hsl(353, 100%, 62%); /* Light red */
+	/* Background gradient - body: */
+	--bodyGradient1: hsl(237, 17%, 21%); /* Very dark gray blue */
+	--bodyGradient2: hsl(237, 23%, 32%); /* Very dark desaturated blue */
+}
+
+body {
+	font-size: 16px;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+/* 
+font-family: 'Overpass', sans-serif; 
+font-family: 'Ubuntu', sans-serif;
+*/
+
+/* Desktop */
+@media only screen and (max-width: 1440px) {
+}
+/* Mobile: 375px */
+@media only screen and (max-width: 375px) {
+}
