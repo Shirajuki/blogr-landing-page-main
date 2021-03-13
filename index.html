@@ -8,39 +8,56 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="style.css">
+		<script>
+			const nav = {"open": false, "dom": undefined, "accordions": []};
+			window.addEventListener("load", () => {
+				console.log("hello");
+				nav.dom = document.getElementById("hamburger");
+				nav.dom.addEventListener("click", (ev) => {
+					ev.target.classList.toggle("open");
+				});
+				nav.accordions = document.querySelectorAll("header nav .dropdown > a");
+				for (const accordion of nav.accordions) {
+					accordion.addEventListener("click", (ev) => {
+						ev.target.classList.toggle("open");
+					});
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header>
-				<a href="#" class="logo"><img src="images/logo.svg" alt="blogr logo"></a>
-				<a href="#" class="hamburger"></a>
+				<a href="javascript:void(0)" class="logo"><img src="images/logo.svg" alt="blogr logo"></a>
+				<a href="javascript:void(0)" class="hamburger" id="hamburger"></a>
+				<a href="javascript:void(0)" class="close"></a>
 				<nav>
 					<div>
 						<div class="dropdown">
-							<a href="#">Product<span class="arrow"></span></a>
+							<a href="javascript:void(0)">Product<span class="arrow"></span></a>
 							<div>
-								<a href="#">Overview</a>
-								<a href="#">Pricing</a>
-								<a href="#">Marketplace</a>
-								<a href="#">Features</a>
-								<a href="#">Integrations</a>
+								<a href="javascript:void(0)">Overview</a>
+								<a href="javascript:void(0)">Pricing</a>
+								<a href="javascript:void(0)">Marketplace</a>
+								<a href="javascript:void(0)">Features</a>
+								<a href="javascript:void(0)">Integrations</a>
 							</div>
 						</div>
 						<div class="dropdown">
-							<a href="#">Company<span class="arrow"></span></a>
+							<a href="javascript:void(0)">Company<span class="arrow"></span></a>
 							<div>
-								<a href="#">About</a>
-								<a href="#">Team</a>
-								<a href="#">Blog</a>
-								<a href="#">Careers</a>
+								<a href="javascript:void(0)">About</a>
+								<a href="javascript:void(0)">Team</a>
+								<a href="javascript:void(0)">Blog</a>
+								<a href="javascript:void(0)">Careers</a>
 							</div>
 						</div>
 						<div class="dropdown">
-							<a href="#">Connect<span class="arrow"></span></a>
+							<a href="javascript:void(0)">Connect<span class="arrow"></span></a>
 							<div>
-								<a href="#">Contact</a>
-								<a href="#">Newsletter</a>
-								<a href="#">LinkedIn</a>
+								<a href="javascript:void(0)">Contact</a>
+								<a href="javascript:void(0)">Newsletter</a>
+								<a href="javascript:void(0)">LinkedIn</a>
 							</div>
 						</div>
 					</div>
